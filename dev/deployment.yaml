@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: orderlabel
-        image: nginx:1.25.3-alpine-slim
+        image: nginx:latest
         ports:
         - containerPort: 80
