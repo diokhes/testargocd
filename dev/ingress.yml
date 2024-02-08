@@ -1,18 +1,21 @@
 apiVersion: networking.k8s.io/v1
-kind: Ingress
+kind: Ingress 
 metadata:
-  name: minimal-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: webapp-ingress
 spec:
-  ingressClassName: nginx-example
+  defaultBackend:
+    service:
+      name: orderlabel
+      port:
+        number: 80
   rules:
-  - http:
+  - host: ingress.local
+    http:
       paths:
-      - path: /
+      - path: / 
         pathType: Prefix
         backend:
           service:
-            name: orderlabel
-            port:
+            name:  orderlabel
+            port: 
               number: 80
