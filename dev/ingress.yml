@@ -1,13 +1,13 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress 
 metadata:
-  name: webapp-ingress
+  name: orderlabel
 spec:
   defaultBackend:
     service:
       name: orderlabel
       port:
-        number: 80
+        number: 8090
   rules:
   - host: ingress.local
     http:
@@ -18,4 +18,4 @@ spec:
           service:
             name:  orderlabel
             port: 
-              number: 80
+              number: 8090
