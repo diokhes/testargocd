@@ -7,7 +7,7 @@ spec:
     service:
       name: orderlabel
       port:
-        number: 8090
+        number: 80
   rules:
   - host: ingress.local
     http:
@@ -18,4 +18,4 @@ spec:
           service:
             name:  orderlabel
             port: 
-              number: 8090
+              number: 80
