@@ -5,9 +5,9 @@ metadata:
 spec:
   selector:
     app: orderlabel
-  
-  type: NodePort
+
   ports:
+    - protocol: TCP
     - name: http
-      port: 80
-      nodePort: 30090
+      port: 8081
+      targetPort: 80
